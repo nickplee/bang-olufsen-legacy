@@ -4,7 +4,7 @@
   "codeowners": [],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/nicklee/beo",
+  "documentation": "https://github.com/nickplee/bang-olufsen-legacy",
   "integration_type": "device",
   "iot_class": "local_push",
   "requirements": [],
