@@ -4,7 +4,7 @@ import os
 
 import pytest
 
-from beo import create_beo_client
+from custom_components.bang_olufsen_legacy.api import create_beo_client
 
 pytestmark = pytest.mark.skipif(not os.environ.get("BEO_HOST"), reason="BEO_HOST not set")
 

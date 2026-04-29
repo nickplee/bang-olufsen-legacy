@@ -4,8 +4,8 @@ from typing import Any
 
 from typer.testing import CliRunner
 
-from beo.cli import app, set_client_factory
-from beo.errors import BeoError
+from cli.main import app, set_client_factory
+from custom_components.bang_olufsen_legacy.api.errors import BeoError
 
 runner = CliRunner()
 

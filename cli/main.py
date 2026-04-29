@@ -8,8 +8,12 @@ from typing import Annotated, Any
 
 import typer
 
-from beo.client import BeoClient, TransportCommand, create_beo_client
-from beo.errors import BeoError
+from custom_components.bang_olufsen_legacy.api.client import (
+    BeoClient,
+    TransportCommand,
+    create_beo_client,
+)
+from custom_components.bang_olufsen_legacy.api.errors import BeoError
 
 app = typer.Typer(help="BeoSound Essence Mk1 control CLI", no_args_is_help=True)
 device_app = typer.Typer(help="Device operations")

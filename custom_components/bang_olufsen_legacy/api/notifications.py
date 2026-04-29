@@ -6,8 +6,13 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from beo.errors import BeoError
-from beo.models import NotificationEnvelope, VolumeOutputState, VolumeRange, VolumeState
+from custom_components.bang_olufsen_legacy.api.errors import BeoError
+from custom_components.bang_olufsen_legacy.api.models import (
+    NotificationEnvelope,
+    VolumeOutputState,
+    VolumeRange,
+    VolumeState,
+)
 
 
 def normalize_volume_range(raw: Any) -> dict[str, int]:

@@ -5,8 +5,11 @@ from pathlib import Path
 
 import pytest
 
-from beo import BeoError, create_beo_client
-from beo.notifications import extract_notifications_from_text, normalize_notification
+from custom_components.bang_olufsen_legacy.api import BeoError, create_beo_client
+from custom_components.bang_olufsen_legacy.api.notifications import (
+    extract_notifications_from_text,
+    normalize_notification,
+)
 
 FIXTURES = Path(__file__).parent / "fixtures"
 HOST = "192.168.1.2"

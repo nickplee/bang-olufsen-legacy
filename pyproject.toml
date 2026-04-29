@@ -3,24 +3,28 @@ name = "beo"
 version = "0.1.0"
 description = "Async Python client and CLI for BeoSound Essence Mk1 control APIs."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<3.13"
 dependencies = [
-  "httpx>=0.28.1",
+  "httpx>=0.27.2,<0.29",
   "pydantic>=2.11.0",
   "typer>=0.16.0",
 ]
 
 [project.scripts]
-beo = "beo.cli:main"
+beo = "cli.main:main"
 
 [dependency-groups]
 dev = [
+  "homeassistant>=2024.12,<2025.1",
   "pytest>=8.3.0",
   "pytest-asyncio>=0.26.0",
-  "pytest-httpx>=0.35.0",
+  "pytest-httpx>=0.30.0,<0.35",
   "ruff>=0.11.0",
   "pyright>=1.1.390",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["cli", "custom_components"]
 
 [build-system]
 requires = ["hatchling"]
@@ -40,4 +44,5 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 [tool.pyright]
 pythonVersion = "3.12"
 typeCheckingMode = "standard"
-include = ["src", "tests"]
+include = ["cli", "custom_components", "tests"]
+reportIncompatibleVariableOverride = "none"

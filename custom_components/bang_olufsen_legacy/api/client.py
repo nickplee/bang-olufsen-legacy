@@ -9,8 +9,8 @@ from urllib.parse import parse_qs, quote, urlparse
 import httpx
 from pydantic import RootModel, ValidationError
 
-from beo.errors import BeoError
-from beo.models import (
+from custom_components.bang_olufsen_legacy.api.errors import BeoError
+from custom_components.bang_olufsen_legacy.api.models import (
     ActiveSourcesResponse,
     DeviceErrorResponse,
     DeviceInfoResponse,
@@ -22,7 +22,7 @@ from beo.models import (
     VolumeLevel,
     VolumeMuted,
 )
-from beo.notifications import (
+from custom_components.bang_olufsen_legacy.api.notifications import (
     extract_notifications_from_text,
     normalize_notification,
     normalize_volume_output_state,
@@ -219,7 +219,7 @@ def _normalize_experience(raw_experience: dict[str, Any]) -> dict[str, Any]:
 
 
 def _normalize_source_for_experience(source: dict[str, Any]) -> dict[str, Any]:
-    from beo.models import Source
+    from custom_components.bang_olufsen_legacy.api.models import Source
 
     parsed = Source.model_validate(source)
     return _normalize_source(parsed.id or "unknown", parsed)
