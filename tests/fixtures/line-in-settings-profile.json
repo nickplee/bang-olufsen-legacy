@@ -1,0 +1,31 @@
+{
+  "profile": {
+    "name": "lineInSettingsProfile",
+    "version": 1,
+    "_links": {
+      "self": {
+        "href": "./"
+      }
+    },
+    "lineInSettings": {
+      "sensitivity": "high",
+      "_capabilities": {
+        "editable": [
+          "sensitivity"
+        ],
+        "value": {
+          "sensitivity": [
+            "high",
+            "medium",
+            "low"
+          ]
+        }
+      },
+      "_links": {
+        "/relation/modify": {
+          "href": "."
+        }
+      }
+    }
+  }
+}

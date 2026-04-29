@@ -1,0 +1,40 @@
+{
+  "playQueue": {
+    "id": "main",
+    "offset": 0,
+    "count": 1,
+    "startOffset": 0,
+    "total": 1,
+    "revision": 42,
+    "playNowId": "item-1",
+    "item": [
+      {
+        "id": "item-1",
+        "behaviour": "PLANNED",
+        "station": {
+          "id": "netRadio:station:1",
+          "name": "BBC 6 Music",
+          "vTuner": {
+            "stationId": 123456
+          }
+        },
+        "_links": {
+          "/relation/delete": {
+            "href": "/BeoZone/Zone/PlayQueue/item-1"
+          },
+          "/relation/insert": {
+            "href": "/BeoZone/Zone/PlayQueue/item-1/insert"
+          },
+          "/relation/move": {
+            "href": "/BeoZone/Zone/PlayQueue/item-1/move"
+          }
+        }
+      }
+    ],
+    "_links": {
+      "next": {
+        "href": "/BeoZone/Zone/PlayQueue?offset=1&count=1"
+      }
+    }
+  }
+}

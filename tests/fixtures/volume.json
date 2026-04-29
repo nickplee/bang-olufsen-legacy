@@ -1,0 +1,20 @@
+{
+  "volume": {
+    "speaker": {
+      "level": 34,
+      "muted": false,
+      "range": {
+        "minimum": 0,
+        "maximum": 90
+      }
+    },
+    "headphone": {
+      "level": 18,
+      "muted": true,
+      "range": {
+        "minimum": 0,
+        "maximum": 32
+      }
+    }
+  }
+}

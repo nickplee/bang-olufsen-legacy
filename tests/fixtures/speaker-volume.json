@@ -1,0 +1,10 @@
+{
+  "speaker": {
+    "level": 34,
+    "muted": false,
+    "range": {
+      "minimum": 0,
+      "maximum": 90
+    }
+  }
+}

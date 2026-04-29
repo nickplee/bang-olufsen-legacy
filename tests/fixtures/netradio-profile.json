@@ -1,0 +1,16 @@
+{
+  "profile": {
+    "name": "netRadioProfile",
+    "version": 1,
+    "rank": 1,
+    "revision": 7,
+    "_links": {
+      "self": {
+        "href": "/BeoContent/netradio/netRadioProfile/"
+      },
+      "/relation/favoritelist": {
+        "href": "/BeoContent/netradio/favoriteList/"
+      }
+    }
+  }
+}

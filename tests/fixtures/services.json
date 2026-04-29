@@ -1,0 +1,9 @@
+{
+  "services": [
+    { "name": "Ping", "path": "/Ping" },
+    { "name": "BeoZone", "path": "/BeoZone" },
+    { "name": "BeoDevice", "path": "/BeoDevice" },
+    { "name": "BeoContent", "path": "/BeoContent" },
+    { "name": "BeoNotify", "path": "/BeoNotify" }
+  ]
+}

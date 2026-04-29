@@ -1,0 +1,35 @@
+{
+  "beoDevice": {
+    "productId": {
+      "productType": "BEOPLAY_V1",
+      "typeNumber": "1234",
+      "itemNumber": "5678",
+      "serialNumber": "2990.0000000.12345678@products.bang-olufsen.com"
+    },
+    "productFamily": "BeoPlay",
+    "productFriendlyName": {
+      "productFriendlyName": "BeoSound Essence"
+    },
+    "software": {
+      "version": "1.12.34567.89012345",
+      "softwareUpdateProductTypeId": 12345
+    },
+    "anonymousProductId": "anon-123",
+    "profiles": [
+      {
+        "name": "powerManagementProfile",
+        "version": 1,
+        "_links": {
+          "self": { "href": "/BeoDevice/powerManagementProfile/" }
+        }
+      },
+      {
+        "name": "lineInSettingsProfile",
+        "version": 1,
+        "_links": {
+          "self": { "href": "/BeoDevice/lineInSettingsProfile/" }
+        }
+      }
+    ]
+  }
+}

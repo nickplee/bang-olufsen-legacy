@@ -1,0 +1,40 @@
+{
+  "activeSources": {
+    "primary": "line-in:2990.0000000.12345678@products.bang-olufsen.com"
+  },
+  "primaryExperience": {
+    "source": {
+      "id": "line-in:2990.0000000.12345678@products.bang-olufsen.com",
+      "friendlyName": "Line-In",
+      "product": {
+        "jid": "2990.0000000.12345678@products.bang-olufsen.com",
+        "friendlyName": "BeoSound Essence"
+      }
+    },
+    "state": "PLAY",
+    "listenerList": {
+      "listener": [
+        {
+          "jid": "3000.0000000.87654321@products.bang-olufsen.com",
+          "_links": {
+            "/relation/delete": {
+              "href": "/BeoZone/Zone/ActiveSources/listener/1"
+            }
+          }
+        }
+      ],
+      "_links": {
+        "/relation/create": {
+          "href": "/BeoZone/Zone/ActiveSources/listener"
+        }
+      },
+      "_capabilities": {
+        "value": {
+          "jid": [
+            "3000.0000000.87654321@products.bang-olufsen.com"
+          ]
+        }
+      }
+    }
+  }
+}

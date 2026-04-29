@@ -1,0 +1,47 @@
+{
+  "sources": [
+    [
+      "line-in:2990.0000000.12345678@products.bang-olufsen.com",
+      {
+        "friendlyName": "Line-In",
+        "category": "AUDIO",
+        "profile": "lineIn",
+        "linkable": true,
+        "inUse": true,
+        "signalSensed": true,
+        "product": {
+          "jid": "2990.0000000.12345678@products.bang-olufsen.com",
+          "friendlyName": "BeoSound Essence"
+        },
+        "sourceType": {
+          "type": "LINE_IN",
+          "connector": 1
+        },
+        "_links": {
+          "/relation/modify": {
+            "href": "/BeoZone/Zone/Sources/line-in"
+          }
+        }
+      }
+    ],
+    [
+      "netRadio",
+      {
+        "id": "netRadio",
+        "friendlyName": "Net Radio",
+        "category": "AUDIO",
+        "profile": "netRadio",
+        "linkable": true,
+        "inUse": false,
+        "sourceType": {
+          "type": "NET_RADIO"
+        },
+        "_links": {
+          "/relation/modify": {
+            "href": "/BeoZone/Zone/Sources/netRadio"
+          }
+        }
+      }
+    ]
+  ]
+}

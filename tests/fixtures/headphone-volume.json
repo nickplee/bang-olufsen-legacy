@@ -1,0 +1,10 @@
+{
+  "headphone": {
+    "level": 18,
+    "muted": true,
+    "range": {
+      "minimum": 0,
+      "maximum": 32
+    }
+  }
+}
