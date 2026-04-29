@@ -1,0 +1,12 @@
+{
+  "domain": "bang_olufsen_legacy",
+  "name": "Bang & Olufsen Legacy",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/nicklee/beo",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "requirements": [],
+  "version": "0.1.0"
+}
