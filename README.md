@@ -114,3 +114,18 @@ BEO_HOST=192.168.1.25 uv run pytest tests/test_live_smoke.py
 
 The project follows the current Home Assistant Python baseline for local development and
 CI.
+
+## Disclaimer
+
+This is an independent, unofficial hobby project. It is not affiliated with, endorsed
+by, sponsored by, or otherwise connected to Bang & Olufsen A/S or any of its
+subsidiaries. "Bang & Olufsen", "B&O", and any related product names are trademarks of
+their respective owners and are used here only to describe device compatibility.
+
+The integration talks to undocumented legacy local APIs on hardware you already own. It
+ships with no warranty of any kind — use at your own risk. If it breaks your device, eats
+your playlist, or scares the cat, that is on you.
+
+## License
+
+Released under the [MIT License](LICENSE). Copyright (c) 2026 Nick Lee.
