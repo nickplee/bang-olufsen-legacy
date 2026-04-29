@@ -62,7 +62,7 @@ class BangOlufsenLegacyMediaPlayer(BangOlufsenLegacyEntity, MediaPlayerEntity):
 
     @property
     def state(self) -> MediaPlayerState:
-        primary_experience = self._active_sources.get("primaryExperience", {})
+        primary_experience = self._active_sources.get("primaryExperience") or {}
         state = self._progress.get("state") or primary_experience.get("state")
         if state == "PLAY":
             return MediaPlayerState.PLAYING
