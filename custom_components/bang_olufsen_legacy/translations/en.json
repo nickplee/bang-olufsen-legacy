@@ -1,0 +1,9 @@
+{
+  "entity": {
+    "sensor": {
+      "software_version": { "name": "Software version" },
+      "setup_version":    { "name": "Setup version" },
+      "setup_health":     { "name": "Setup health" }
+    }
+  }
+}

@@ -41,7 +41,6 @@ class BangOlufsenLegacyCoordinator(DataUpdateCoordinator[dict[str, Any]]):
     async def _async_update_data(self) -> dict[str, Any]:
         try:
             data: dict[str, Any] = {
-                "services": await self.client.services(),
                 "device": await self.client.device.get_info(),
                 "features": await self.client.zone.get_features(),
                 "sources": await self.client.zone.get_sources(),
@@ -52,6 +51,7 @@ class BangOlufsenLegacyCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             await self._optional(data, "netradio", self.client.content.get_netradio_profile)
             await self._optional(data, "setup_version", self.client.setup.get_version)
             await self._optional(data, "setup_health", self.client.setup.get_index)
+            await self._optional(data, "services", self.client.services)
             await self._optional(data, "line_in", self.client.device.line_in.get)
             if self._notify_task is None or self._notify_task.done():
                 self._notify_task = asyncio.create_task(self._listen_for_notifications())

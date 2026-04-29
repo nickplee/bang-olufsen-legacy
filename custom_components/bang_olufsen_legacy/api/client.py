@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from collections.abc import AsyncIterator
 from dataclasses import dataclass
 from typing import Any, Literal
@@ -874,7 +875,12 @@ class _SetupNamespace:
         parsed = _safe_json_parse(response.text)
         if isinstance(parsed, dict) and isinstance(parsed.get("version"), str):
             return {"version": parsed["version"], "raw": parsed}
-        return {"version": response.text.strip(), "raw": response.text}
+        match = re.search(r"(?im)^version\s*=\s*(\S+)", response.text)
+        if match:
+            return {"version": match.group(1), "raw": response.text}
+        stripped = response.text.strip()
+        version = stripped if stripped and "\n" not in stripped and len(stripped) <= 50 else None
+        return {"version": version, "raw": response.text}
 
     async def get_index(self) -> dict[str, Any]:
         response = await self._client._session.setup_text("/")

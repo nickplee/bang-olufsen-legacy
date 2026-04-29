@@ -69,6 +69,11 @@ class BangOlufsenLegacySensor(BangOlufsenLegacyEntity, SensorEntity):
             return data.get("device", {}).get("softwareVersion")
         value: Any = data.get(key)
         if isinstance(value, dict):
+            if key == "setup_health":
+                status = value.get("status")
+                if isinstance(status, int):
+                    return "ok" if 200 <= status < 300 else str(status)
+                return None
             return value.get("version") or value.get("status")
         if isinstance(value, str | int):
             return value
