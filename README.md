@@ -7,8 +7,6 @@
 client, and `beo` command-line tool for legacy Bang & Olufsen network products that
 expose the older Beo control APIs.
 
-The repository name should be `bang-olufsen-legacy`.
-
 ## What Is Included
 
 - Home Assistant custom integration: `custom_components/bang_olufsen_legacy`
@@ -110,8 +108,9 @@ BEO_HOST=192.168.1.25 uv run pytest tests/test_live_smoke.py
 
 ## Compatibility
 
-- Python: `>=3.12,<3.13`
-- Home Assistant test target: `2024.12.x`
-- HACS minimum Home Assistant version: `2024.12.0`
+- Python: `>=3.14.2,<3.15`
+- Home Assistant test target: `2026.4.x`
+- HACS minimum Home Assistant version: `2026.4.0`
 
-Newer Home Assistant releases can be evaluated once the project moves to Python 3.13.
+The project follows the current Home Assistant Python baseline for local development and
+CI.
