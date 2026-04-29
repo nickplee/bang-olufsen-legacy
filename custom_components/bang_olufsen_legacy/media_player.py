@@ -38,8 +38,6 @@ class BangOlufsenLegacyMediaPlayer(BangOlufsenLegacyEntity, MediaPlayerEntity):
             features |= MediaPlayerEntityFeature.PAUSE
         if "STOP" in zone_features:
             features |= MediaPlayerEntityFeature.STOP
-        if "TOGGLE_POWER" in zone_features:
-            features |= MediaPlayerEntityFeature.TURN_ON | MediaPlayerEntityFeature.TURN_OFF
         if self._progress.get("seekSupported") and self._progress.get("playQueueItemId"):
             features |= MediaPlayerEntityFeature.SEEK
         return features
@@ -166,12 +164,3 @@ class BangOlufsenLegacyMediaPlayer(BangOlufsenLegacyEntity, MediaPlayerEntity):
         )
         await self.coordinator.async_request_refresh()
 
-    async def async_turn_on(self) -> None:
-        if self.state == MediaPlayerState.OFF:
-            await self.coordinator.client.zone.command("toggle-power")
-            await self.coordinator.async_request_refresh()
-
-    async def async_turn_off(self) -> None:
-        if self.state != MediaPlayerState.OFF:
-            await self.coordinator.client.zone.command("toggle-power")
-            await self.coordinator.async_request_refresh()
